@@ -8,6 +8,10 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
+app.use('/', (req,res) => {
+  res.send('Hello World!');
+});
+
 
 app.use(cors());
 app.use(express.json());
